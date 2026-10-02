@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Адемаға ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050505;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Фон */
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: #d4af37;
+    opacity: 0.08;
+    filter: blur(150px);
+    border-radius: 50%;
+    top: -200px;
+    left: -200px;
+    z-index: -5;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: #fff1a8;
+    opacity: 0.05;
+    filter: blur(150px);
+    border-radius: 50%;
+    right: -200px;
+    bottom: -200px;
+    z-index: -5;
+}
+
+/* Фондағы алтын бөлшектер */
+
+.particle {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: #d4af37;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #d4af37;
+    animation: float 8s linear infinite;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Басты экран */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero-content {
+    max-width: 900px;
+    animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Негізгі тақырып */
+
+h1 {
+    font-size: clamp(45px, 9vw, 100px);
+    line-height: 1;
+    font-weight: 700;
+
+    background: linear-gradient(
+        120deg,
+        #ffffff,
+        #d4af37,
+        #fff4b0,
+        #ffffff,
+        #b8860b
+    );
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation: gold 6s infinite;
+}
+
+@keyframes gold {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+/* Адема есімі */
+
+.sister-name {
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #d4af37,
+        #fff4b0,
+        #d4af37,
+        #ffffff
+    );
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation: nameGlow 4s infinite;
+}
+
+@keyframes nameGlow {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+/* Мәтін */
+
+.subtitle {
+    margin-top: 30px;
+    color: #bdbdbd;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Батырма */
+
+.button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 17px 38px;
+
+    border: 1px solid #d4af37;
+    border-radius: 50px;
+
+    color: white;
+    text-decoration: none;
+
+    background: rgba(212,175,55,0.08);
+
+    transition: 0.4s;
+
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background: #d4af37;
+    color: #050505;
+
+    box-shadow:
+        0 0 20px rgba(212,175,55,0.4),
+        0 0 50px rgba(212,175,55,0.2);
+
+    transform: translateY(-4px);
+}
+
+/* Секциялар */
+
+section {
+    padding: 100px 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: #d4af37;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    margin-top: 15px;
+}
+
+/* Құттықтау карточкасы */
+
+.message-card {
+    padding: 50px;
+
+    border: 1px solid rgba(212,175,55,0.25);
+    border-radius: 30px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.06),
+        rgba(255,255,255,0.01)
+    );
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 80px rgba(0,0,0,0.5);
+
+    text-align: center;
+}
+
+.message-card .icon {
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+
+.message-card h3 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #d4af37;
+}
+
+.message-card p {
+    color: #d0d0d0;
+    line-height: 1.9;
+    font-size: 18px;
+}
+
+.gold-name {
+    color: #d4af37;
+}
+
+/* Фотолар */
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.photo {
+    height: 350px;
+
+    border-radius: 25px;
+    overflow: hidden;
+
+    border: 1px solid rgba(212,175,55,0.25);
+
+    background:
+        linear-gradient(
+            145deg,
+            #151515,
+            #0b0b0b
+        );
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s;
+}
+
+.photo:hover img {
+    transform: scale(1.08);
+}
+
+/* Жеке мәтін */
+
+.personal {
+    text-align: center;
+    padding: 100px 30px;
+}
+
+.personal h2 {
+    font-size: clamp(35px, 6vw, 60px);
+    margin-bottom: 30px;
+}
+
+.personal h2 span {
+    color: #d4af37;
+}
+
+.personal p {
+    max-width: 750px;
+    margin: auto;
+
+    color: #bdbdbd;
+
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+/* Соңғы экран */
+
+.final {
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.final h2 {
+    font-size: clamp(45px, 8vw, 90px);
+
+    background:
+        linear-gradient(
+            120deg,
+            #ffffff,
+            #d4af37
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.final p {
+    margin-top: 25px;
+    color: #aaa;
+    font-size: 18px;
+}
+
+.heart {
+    display: inline-block;
+    margin-top: 35px;
+    font-size: 45px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Жасырын құттықтау */
+
+#secret {
+    display: none;
+}
+
+#secret.show {
+    display: block;
+    animation: appear 1s ease;
+}
+
+/* Музыка батырмасы */
+
+#musicButton {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: 1px solid #d4af37;
+
+    background: rgba(20,20,20,0.85);
+
+    color: #d4af37;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 20px rgba(212,175,55,0.25);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 10000;
+
+    transition: 0.3s;
+}
+
+#musicButton:hover {
+    transform: scale(1.1);
+
+    background: #d4af37;
+
+    color: #050505;
+}
+
+/* Салют */
+
+#fireworks {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 9999;
+}
+
+/* Телефон */
+
+@media (max-width: 700px) {
+
+    section {
+        padding: 70px 18px;
+    }
+
+    .message-card {
+        padding: 30px 20px;
+    }
+
+    .photos {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        height: 400px;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+    .message-card p {
+        font-size: 16px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Фондағы бөлшектер -->
+
+<div class="particle" style="left:10%; animation-delay:0s;"></div>
+<div class="particle" style="left:20%; animation-delay:2s;"></div>
+<div class="particle" style="left:35%; animation-delay:4s;"></div>
+<div class="particle" style="left:50%; animation-delay:1s;"></div>
+<div class="particle" style="left:65%; animation-delay:3s;"></div>
+<div class="particle" style="left:80%; animation-delay:5s;"></div>
+<div class="particle" style="left:90%; animation-delay:2s;"></div>
+
+
+<!-- Басты экран -->
+
+<div class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Ең керемет<br>
+            ұстазға<br>
+            <span class="sister-name">
+                Адемаға
+            </span>
+        </h1>
+
+        <p class="subtitle">
+            Бұл шағын сайт арнайы<br>
+            саған арналады, аяулы әпкем ❤️
+        </p>
+
+        <a
+            href="#secret"
+            class="button"
+            onclick="openMessage()">
+
+            Құттықтауды ашу ✨
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- Құттықтау -->
+
+<section id="secret">
+
+    <div class="section-title">
+
+        <span>
+            Арнайы құттықтау
+        </span>
+
+        <h2>
+            Ұстаздар күні құтты болсын! 🌷
+        </h2>
+
+    </div>
+
+
+    <div class="message-card">
+
+        <div class="icon">
+            ✨
+        </div>
+
+        <h3>
+            Сүйікті әпкем
+            <span class="gold-name">
+                Адемаға
+            </span>
+            ❤️
+        </h3>
+
+        <p>
+
+            Қымбатты
+            <strong class="gold-name">
+                Адема
+            </strong>! ❤️
+
+            <br><br>
+
+            Сені Ұстаздар күнімен
+            шын жүректен құттықтаймын!
+
+            <br><br>
+
+            Ұстаз болу — жай ғана мамандық емес.
+            Бұл — балаларға білім беріп,
+            олардың арманына жол көрсетіп,
+            әрқайсысына қолдау көрсету.
+
+            <br><br>
+
+            Саған еңбегіңнің жемісін көріп,
+            шәкірттеріңнің жетістіктеріне
+            әрдайым қуанып жүруді тілеймін.
+
+            <br><br>
+
+            Әр күнің қуанышқа,
+            жұмысың шабытқа,
+            жүрегің жылулыққа толы болсын!
+
+            <br><br>
+
+            Шәкірттерің әрдайым
+            сені мақтан тұтсын!
+
+            <br><br>
+
+            Мен сені мақтан тұтамын! ❤️
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Фотолар -->
+
+<section>
+
+    <div class="section-title">
+
+        <span>
+            Біздің естеліктер
+        </span>
+
+        <h2>
+            Әдемі сәттер 📸
+        </h2>
+
+    </div>
+
+
+    <div class="photos">
+
+        <div class="photo">
+            <img
+                src="sister1.jpg"
+                alt="Адема">
+        </div>
+
+        <div class="photo">
+            <img
+                src="sister2.jpg"
+                alt="Адема">
+        </div>
+
+        <div class="photo">
+            <img
+                src="sister3.jpg"
+                alt="Адема">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Жеке хабарлама -->
+
+<section class="personal">
+
+    <h2>
+        Сен жай ғана
+        <span>
+            ұстаз емессің.
+        </span>
+    </h2>
+
+    <p>
+
+        Адема, сен әр күн сайын
+        өз шәкірттеріңе білім беріп,
+        олардың жақсы адам болып
+        қалыптасуына үлес қосып жүрсің.
+
+        <br><br>
+
+        Сенің еңбегің, мейірімің
+        мен шыдамдылығың
+        әрқашан бағалансын.
+
+        <br><br>
+
+        Әрбір шәкіртіңнің жетістігі
+        саған үлкен қуаныш сыйласын.
+
+        <br><br>
+
+        Өмірің бақытқа,
+        жүрегің қуанышқа,
+        әр күнің әдемі сәттерге толы болсын.
+
+        <br><br>
+
+        Мен сені қатты жақсы көремін
+        және сені мақтан тұтамын! ❤️
+
+    </p>
+
+</section>
+
+
+<!-- Соңғы экран -->
+
+<div class="final">
+
+    <div>
+
+        <h2>
+            Ұстаздар күні құтты болсын! ✨
+        </h2>
+
+        <p>
+            Әр жаңа күнің
+            қуаныш пен бақытқа толы болсын.
+        </p>
+
+        <div class="heart">
+            ❤️
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    Адемаға арнап, жүрекпен жасалды ❤️
+
+</footer>
+
+
+<!-- Музыка -->
+
+<audio
+    id="backgroundMusic"
+    loop>
+
+    <source
+        src="music.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<!-- Музыка батырмасы -->
+
+<button
+    id="musicButton"
+    onclick="toggleMusic()">
+
+    🎵
+
+</button>
+
+
+<!-- Салют -->
+
+<canvas id="fireworks"></canvas>
+
+
+<script>
+
+/* =========================
+   ҚҰТТЫҚТАУДЫ АШУ
+========================= */
+
+function openMessage() {
+
+    const secret =
+        document.getElementById("secret");
+
+    secret.classList.add("show");
+
+
+    /* Музыканы қосу */
+
+    const music =
+        document.getElementById(
+            "backgroundMusic"
+        );
+
+    music.volume = 0.35;
+
+    music.play().catch(function() {
+        console.log(
+            "Музыканы браузер бұғаттады."
+        );
+    });
+
+
+    /* Құттықтауға жылжу */
+
+    setTimeout(function() {
+
+        secret.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }, 100);
+
+
+    /* Салют */
+
+    startFireworks();
+
+}
+
+
+/* =========================
+   МУЗЫКА
+========================= */
+
+function toggleMusic() {
+
+    const music =
+        document.getElementById(
+            "backgroundMusic"
+        );
+
+    const button =
+        document.getElementById(
+            "musicButton"
+        );
+
+
+    if (music.paused) {
+
+        music.play();
+
+        button.innerHTML = "🎵";
+
+    } else {
+
+        music.pause();
+
+        button.innerHTML = "🔇";
+
+    }
+
+}
+
+
+/* =========================
+   САЛЮТ
+========================= */
+
+const canvas =
+    document.getElementById(
+        "fireworks"
+    );
+
+const ctx =
+    canvas.getContext("2d");
+
+let particles = [];
+
+let fireworksActive = false;
+
+
+/* Canvas өлшемі */
+
+function resizeCanvas() {
+
+    canvas.width =
+        window.innerWidth;
+
+    canvas.height =
+        window.innerHeight;
+
+}
+
+resizeCanvas();
+
+window.addEventListener(
+    "resize",
+    resizeCanvas
+);
+
+
+/* Бір салют */
+
+function createFirework(x, y) {
+
+    const count = 120;
+
+
+    for (
+        let i = 0;
+        i < count;
+        i++
+    ) {
+
+        const angle =
+            Math.random()
+            * Math.PI
+            * 2;
+
+        const speed =
+            Math.random() * 7 + 3;
+
+
+        particles.push({
+
+            x: x,
+
+            y: y,
+
+            vx:
+                Math.cos(angle)
+                * speed,
+
+            vy:
+                Math.sin(angle)
+                * speed,
+
+            gravity: 0.07,
+
+            life: 100,
+
+            size:
+                Math.random()
+                * 2.5 + 1,
+
+            color: [
+
+                "#FFD700",
+                "#FFF2A6",
+                "#D4AF37",
+                "#FFFFFF",
+                "#F5C542"
+
+            ][
+
+                Math.floor(
+                    Math.random() * 5
+                )
+
+            ]
+
+        });
+
+    }
+
+}
+
+
+/* Салют анимациясы */
+
+function animateFireworks() {
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+
+    for (
+        let i = particles.length - 1;
+        i >= 0;
+        i--
+    ) {
+
+        const p =
+            particles[i];
+
+
+        p.x += p.vx;
+        p.y += p.vy;
+
+
+        p.vy += p.gravity;
+
+
+        p.vx *= 0.98;
+        p.vy *= 0.98;
+
+
+        p.life--;
+
+
+        ctx.beginPath();
+
+
+        ctx.arc(
+            p.x,
+            p.y,
+            p.size,
+            0,
+            Math.PI * 2
+        );
+
+
+        ctx.fillStyle =
+            p.color;
+
+
+        ctx.shadowBlur = 20;
+
+        ctx.shadowColor =
+            "#FFD700";
+
+
+        ctx.globalAlpha =
+            p.life / 100;
+
+
+        ctx.fill();
+
+
+        ctx.globalAlpha = 1;
+
+
+        if (p.life <= 0) {
+
+            particles.splice(i, 1);
+
+        }
+
+    }
+
+
+    if (
+        fireworksActive ||
+        particles.length > 0
+    ) {
+
+        requestAnimationFrame(
+            animateFireworks
+        );
+
+    }
+
+}
+
+
+/* Салютты бастау */
+
+function startFireworks() {
+
+    fireworksActive = true;
+
+    animateFireworks();
+
+
+    const positions = [
+
+        [0.20, 0.30],
+        [0.50, 0.22],
+        [0.80, 0.30],
+        [0.35, 0.45],
+        [0.65, 0.45]
+
+    ];
+
+
+    positions.forEach(
+        function(pos, index) {
+
+            setTimeout(
+                function() {
+
+                    createFirework(
+
+                        canvas.width
+                        * pos[0],
+
+                        canvas.height
+                        * pos[1]
+
+                    );
+
+                },
+
+                index * 450
+            );
+
+        }
+    );
+
+
+    /* Қосымша салюттар */
+
+    setTimeout(
+        function() {
+
+            for (
+                let i = 0;
+                i < 5;
+                i++
+            ) {
+
+                setTimeout(
+                    function() {
+
+                        createFirework(
+
+                            Math.random()
+                            * canvas.width,
+
+                            Math.random()
+                            * canvas.height
+                            * 0.55
+
+                        );
+
+                    },
+
+                    i * 500
+                );
+
+            }
+
+        },
+
+        2500
+    );
+
+
+    setTimeout(
+        function() {
+
+            fireworksActive = false;
+
+        },
+
+        5500
+    );
+
+}
+
+</script>
+
+</body>
+</html>
